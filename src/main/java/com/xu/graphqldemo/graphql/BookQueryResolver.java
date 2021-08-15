@@ -14,6 +14,11 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+/**
+ * 还需要解决：
+ *  1.Schema 中的query 对应哪个DataLoader
+ *  2. Schema query 中某个字段对应哪个DataLoader
+ */
 @Component
 public class BookQueryResolver implements GraphQLQueryResolver {
     public CompletableFuture<List<Book>> queryBooks(List<String> bookIds, DataFetchingEnvironment dfe) {
